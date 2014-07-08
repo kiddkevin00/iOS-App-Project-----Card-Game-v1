@@ -27,6 +27,7 @@
 		2C2FBADB19698ADA002AC4DA /* PlayCardDeck.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2FBADA19698ADA002AC4DA /* PlayCardDeck.m */; };
 		2C2FBADF19699196002AC4DA /* cardBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C2FBADE19699196002AC4DA /* cardBack.jpeg */; };
 		2C2FBAE219699AD3002AC4DA /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2FBAE119699AD3002AC4DA /* CardMatchingGame.m */; };
+		2C6F2223196C946900E91F09 /* cardFront.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C6F2222196C946900E91F09 /* cardFront.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		2C2FBADE19699196002AC4DA /* cardBack.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardBack.jpeg; sourceTree = "<group>"; };
 		2C2FBAE019699AD3002AC4DA /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
 		2C2FBAE119699AD3002AC4DA /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
+		2C6F2222196C946900E91F09 /* cardFront.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardFront.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,12 +131,13 @@
 		2C2FBA9D1968F633002AC4DA /* CardGame_v1 */ = {
 			isa = PBXGroup;
 			children = (
+				2C6F2222196C946900E91F09 /* cardFront.jpeg */,
+				2C2FBADE19699196002AC4DA /* cardBack.jpeg */,
 				2C2FBAA91968F633002AC4DA /* Main.storyboard */,
 				2C2FBAA61968F633002AC4DA /* DefaultAppDelegate.h */,
 				2C2FBAA71968F633002AC4DA /* DefaultAppDelegate.m */,
 				2C2FBAAC1968F633002AC4DA /* DefaultViewController.h */,
 				2C2FBAAD1968F633002AC4DA /* DefaultViewController.m */,
-				2C2FBADE19699196002AC4DA /* cardBack.jpeg */,
 				2C2FBAAF1968F633002AC4DA /* Images.xcassets */,
 				2C2FBA9E1968F633002AC4DA /* Supporting Files */,
 				2C2FBAD21968F798002AC4DA /* model */,
@@ -268,6 +271,7 @@
 				2C2FBAB01968F633002AC4DA /* Images.xcassets in Resources */,
 				2C2FBAA21968F633002AC4DA /* InfoPlist.strings in Resources */,
 				2C2FBADF19699196002AC4DA /* cardBack.jpeg in Resources */,
+				2C6F2223196C946900E91F09 /* cardFront.jpeg in Resources */,
 				2C2FBAAB1968F633002AC4DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -499,6 +503,7 @@
 				2C2FBAC81968F633002AC4DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C2FBAC91968F633002AC4DA /* Build configuration list for PBXNativeTarget "CardGame_v1Tests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +512,7 @@
 				2C2FBACB1968F633002AC4DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
