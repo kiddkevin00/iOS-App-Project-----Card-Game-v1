@@ -13,6 +13,7 @@
 
 @property (nonatomic, readwrite) NSInteger score;
 @property (nonatomic, strong) NSMutableArray *cards; // Card
+@property (nonatomic, strong) NSString *interactiveText;
 @end
 
 @implementation CardMatchingGame
@@ -62,6 +63,7 @@ static const int COST_TO_CHOOSE = 1;
                         self.score += matchScore * MATCH_BONUS;
                         otherCard.matched = YES;
                         card.matched = YES;
+                        
                         
                     } else {
                         self.score -= MATCH_PENALTY;

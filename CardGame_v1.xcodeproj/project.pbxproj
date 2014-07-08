@@ -28,6 +28,7 @@
 		2C2FBADF19699196002AC4DA /* cardBack.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C2FBADE19699196002AC4DA /* cardBack.jpeg */; };
 		2C2FBAE219699AD3002AC4DA /* CardMatchingGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C2FBAE119699AD3002AC4DA /* CardMatchingGame.m */; };
 		2C6F2223196C946900E91F09 /* cardFront.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2C6F2222196C946900E91F09 /* cardFront.jpeg */; };
+		2C96BCF1196CA48600B233F8 /* pokerBackground3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C96BCF0196CA48600B233F8 /* pokerBackground3.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		2C2FBAE019699AD3002AC4DA /* CardMatchingGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardMatchingGame.h; sourceTree = "<group>"; };
 		2C2FBAE119699AD3002AC4DA /* CardMatchingGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardMatchingGame.m; sourceTree = "<group>"; };
 		2C6F2222196C946900E91F09 /* cardFront.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cardFront.jpeg; sourceTree = "<group>"; };
+		2C96BCF0196CA48600B233F8 /* pokerBackground3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pokerBackground3.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 		2C2FBA9D1968F633002AC4DA /* CardGame_v1 */ = {
 			isa = PBXGroup;
 			children = (
+				2C96BCF0196CA48600B233F8 /* pokerBackground3.jpg */,
 				2C6F2222196C946900E91F09 /* cardFront.jpeg */,
 				2C2FBADE19699196002AC4DA /* cardBack.jpeg */,
 				2C2FBAA91968F633002AC4DA /* Main.storyboard */,
@@ -273,6 +276,7 @@
 				2C2FBADF19699196002AC4DA /* cardBack.jpeg in Resources */,
 				2C6F2223196C946900E91F09 /* cardFront.jpeg in Resources */,
 				2C2FBAAB1968F633002AC4DA /* Main.storyboard in Resources */,
+				2C96BCF1196CA48600B233F8 /* pokerBackground3.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -37,7 +37,7 @@
     int chosenButtonIndex = [self.cardsButton indexOfObject:sender];
     [self.game chooseCardAtIndex:chosenButtonIndex];
     [self upadateUI];
-
+    
 }
 
 - (void)upadateUI {
@@ -46,7 +46,7 @@
         Card *card = [self.game cardAtIndex:cardButtonIndex];
         [cardButton setTitle:[self titleForCard:card] forState:UIControlStateNormal];
         [cardButton setBackgroundImage:[self backgroundImageForCard:card] forState:UIControlStateNormal];
-        NSLog(@"Match : %d", card.isMatched);
+        //NSLog(@"Match : %d", card.isMatched);
         cardButton.enabled = !card.isMatched;
         
         self.scoreLabel.text = [NSString stringWithFormat:@"Score :  %d", self.game.score];
@@ -67,6 +67,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"pokerBackground3.jpg"]];
 }
 
 - (void)didReceiveMemoryWarning
