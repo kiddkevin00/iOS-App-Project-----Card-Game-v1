@@ -13,10 +13,15 @@
 
 @property (nonatomic, readwrite) NSInteger score;
 @property (nonatomic, strong) NSMutableArray *cards; // Card
-@property (nonatomic, strong) NSString *interactiveText;
+@property (nonatomic, readwrite) NSString *interactiveText;
+
 @end
 
 @implementation CardMatchingGame
+
+- (void) resetScore {
+    self.score = 0;
+}
 
 - (NSMutableArray *)cards {
     if (!_cards) {
@@ -52,6 +57,7 @@ static const int COST_TO_CHOOSE = 1;
 - (void)chooseCardAtIndex:(NSUInteger)index {
     //NSLog(@"%d  %d", index, [self.cards count]);
     Card *card = [self.cards objectAtIndex:index];
+    self.interactiveText = [NSString stringWithFormat:@"Please Continue.."];
     if (!card.isMatched) {
         if (card.isChosen) {
             card.chosen = NO;
@@ -61,12 +67,12 @@ static const int COST_TO_CHOOSE = 1;
                     int matchScore = [card match:@[otherCard]];
                     if (matchScore) {
                         self.score += matchScore * MATCH_BONUS;
+                        self.interactiveText = [NSString stringWithFormat:@"Congradulation!!"];
                         otherCard.matched = YES;
                         card.matched = YES;
-                        
-                        
                     } else {
                         self.score -= MATCH_PENALTY;
+                        self.interactiveText = [NSString stringWithFormat:@"Sorry! Please try agin.."];
                         // flip the other mismatched card
                         otherCard.chosen = NO;
                     }

@@ -16,10 +16,31 @@
 @property (strong, nonatomic) CardMatchingGame *game;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *cardsButton;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *interactiveLabel;
 
 @end
 
 @implementation DefaultViewController
+
+- (IBAction)retryButton:(UIButton *)sender {
+    self.scoreLabel.text = [NSString stringWithFormat:@"Score :  0"];
+    [self.game resetScore];
+    
+    self.interactiveLabel.text = [NSString stringWithFormat:@"Welcome back.."];
+    
+    for (UIButton *cardButton in self.cardsButton) {
+        int cardButtonIndex = [self.cardsButton indexOfObject:cardButton];
+        Card *card = [self.game cardAtIndex:cardButtonIndex];
+        card.matched = NO;
+        card.chosen = NO;
+        cardButton.enabled = YES;
+        
+        [cardButton setTitle:@"" forState:UIControlStateNormal];
+        [cardButton setBackgroundImage:[UIImage imageNamed:@"cardBack.jpeg"] forState:UIControlStateNormal];
+        
+    }
+    
+}
 
 - (CardMatchingGame *)game {
     if (!_game) {
@@ -50,6 +71,7 @@
         cardButton.enabled = !card.isMatched;
         
         self.scoreLabel.text = [NSString stringWithFormat:@"Score :  %d", self.game.score];
+        self.interactiveLabel.text = [NSString stringWithFormat:@"%@", self.game.interactiveText];
         //NSLog(@"%d", cardButtonIndex);
         //NSLog(@"Score :  %@", self.scoreLabel.text);
     }
