@@ -23,6 +23,17 @@
 @implementation DefaultViewController
 
 - (IBAction)retryButton:(UIButton *)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[self setAlertTitle] message:[NSString stringWithFormat:@"Score : %d\nEnter your name to save..", self.game.score] delegate:self  cancelButtonTitle:@"Cancel" otherButtonTitles:@"Ok", nil];
+    
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    UITextField *alertTextField = [alert textFieldAtIndex:0];
+    alertTextField.keyboardType = UIKeyboardTypeAlphabet;
+    alertTextField.placeholder = @"Enter your name";
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    [alert show];
+    //[alert release];
+    
     self.scoreLabel.text = [NSString stringWithFormat:@"Score :  0"];
     [self.game resetScore];
     
@@ -40,6 +51,16 @@
         
     }
     
+}
+
+- (NSString *)setAlertTitle {
+    if (self.game.score <= 0) {
+        return [NSString stringWithFormat:@"Loser"];
+    } else if (20 > self.game.score > 0){
+        return [NSString stringWithFormat:@"Medium"];
+    } else {
+        return [NSString stringWithFormat:@"Pro"];
+    }
 }
 
 - (CardMatchingGame *)game {
@@ -90,6 +111,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed:@"pokerBackground3.jpg"]];
+    
 }
 
 - (void)didReceiveMemoryWarning
